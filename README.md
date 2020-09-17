@@ -1,2 +1,2 @@
-# MyRecipeLogger
-Web App to keep recipes in, better name to be determined. 
+# MyPersonalPortfolio
+Here is my personal portfolio, a website I made with Django as a way to practice.
