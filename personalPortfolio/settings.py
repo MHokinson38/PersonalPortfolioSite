@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello_world',
+    'projects',
 ]
 
 MIDDLEWARE = [
@@ -52,10 +52,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'personalPortfolio.urls'
 
+# Here we are declaring the templates directory so that it can find the base html pages that we write 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["personalPortfolio/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

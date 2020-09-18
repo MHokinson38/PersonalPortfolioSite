@@ -17,6 +17,5 @@ from django.contrib import admin
 from django.urls import path, include 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('hello_world.urls')), #This will look through module urls.py in hello_world dir, where it will be able to further register the urls stored there 
+    path('admin/', admin.site.urls), # path('', include('hello_world.urls')) => This will look through module urls.py in hello_world dir, where it will be able to further register the urls stored there 
 ]
