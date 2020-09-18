@@ -1,0 +1,25 @@
+<!-- Here we are going to create a template for the projects display using Bootstrap cards-->
+<!-- We are going to dynamically generate however many cards we need to view all of our projects-->
+
+{% extends "base.html" %} <!-- Extend our base.html (which has our Bootstrap import -->
+{% load static %} <!-- This allows us to include static files, like the images that we are including in the cards-->
+{% block page_content %}
+    <h1>Projects</h1>
+    <div class="row">
+        {% for project in projects %} <!-- For loop for creating the project snippet cards -->
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <img class="card-img-top" src="{% static project.image %}"> <!-- This is telling Django to look into the static directory and find the project.image-->
+
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ project.title }} </h5> <!-- Double curly brace allows us to access any project attribute-->
+                        
+                        <p class="card-text"> {{ project.description }} </p>
+
+                        <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary"> Read more </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %} <!-- Page_content -->
